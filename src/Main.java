@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
+//new
 public class Main {
 
 	public static void main(String[] args) {
