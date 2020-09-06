@@ -6,7 +6,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		ArrayList<travel> allTravels = new ArrayList<travel>();
-		int choose = 0, i = 0;
+		int choose = 0;
 		boolean fCountinue = true;
 		Scanner s = new Scanner(System.in);
 
