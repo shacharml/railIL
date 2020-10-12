@@ -36,7 +36,7 @@ def rail_schedule():
         minutes = 'null'
 
 
-    return subprocess.check_output(["java", "-classpath", "/home/shachar/git/railIL/bin", "main_web/main_web", outformat
+    return subprocess.check_output(["java", "-classpath", "/home/shachar/git/railIL/bin", "main/main", outformat
                                    ,startS , lastS , hour, minutes])
 
 
