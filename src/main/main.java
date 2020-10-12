@@ -4,24 +4,18 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
-
-
 import Main.stopovers;
 import Main.travel;
 
 public class main {
-
+	
 	///rail?outfomate=html&startS=Binyamina&lastS=Modiin&hour=12&minutes=10
 
-	
-	
-	
 	public static void main(String[] args) throws FileNotFoundException {
 		
-		//System.out.println("<img src="+ "railIl.jpg"+">");
+		
 		System.out.println("<h1 style=\"text-align:center;font-family:tahoma\">The Rail IL Poject</h1>");
 		
-		//\\"text-align:center;font-family:courier\\
 		
 		System.out.println("<div style=\"border: 2px solid black\"> <p style=text-align:center;font-family:courier;font-size:140%>"
 		+ "Your travel for serch :"+"<br>"+
@@ -35,12 +29,9 @@ public class main {
 		int hour = Integer.parseInt(args[3]);
 		int minutes = Integer.parseInt(args[4]);
 		
-		travel tr = new travel(startingS, LastS, hour, minutes, null);
 		File f = new File("/home/shachar/git/railIL/allTravels.txt");
 
 		ArrayList<travel> allTravels = scanFromFile(f);
-		
-		//System.out.println(tr.toString());
 		
 		serchByRide(startingS, LastS, hour, minutes, allTravels);
    
@@ -54,18 +45,19 @@ public class main {
 		int counter =1 ;
 		
        while (hour > 24 || hour <= 0) {
-					System.out.println("Enter hour again  it is incorrect ");
+					System.out.println("<p style=\"color:red;\";font-family:courier;font-size:130%>"
+							+ "Enter hour again  it is incorrect </p>");
 					
     	   return;
 				}
 				while (minute > 59 || minute < 0) {
-					System.out.println("Enter minute again it is incorrect ");
+					System.out.println("<p style=\\\"color:red;\\\";font-family:courier;font-size:130%>"
+							+ "Enter minute again it is incorrect </p> ");
 					
 					return;
 				}
 
 				//we want 3 rides who start in Binyamina to Modiin in 10:12
-				
 				
 				for (int i = 0; i < allTravels.size() && counter <= 3; i++) {
 					
