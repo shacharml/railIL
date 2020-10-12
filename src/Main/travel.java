@@ -17,7 +17,10 @@ public class travel {
 		this.startingState = startingState;
 		this.hour = hour;
 		this.minute = minute;
-		this.allStopovers= allStopovers;
+		if (allStopovers != null) {
+			this.allStopovers= allStopovers;	
+		}
+		
 	}
 
 	public String getLastgState() {
@@ -32,6 +35,13 @@ public class travel {
 	public String toString() {
 		return "travel [Starting State=" + startingState + ", Lastg State=" + lastgState + ", Departure time = "
 				+ show2() + "the stops overes between this stations: "+allStopovers.toString()+ "] \n";
+	}
+	
+	public String toStringHTML(int counter) {
+		return counter +")<br>" +"Starting State= " + startingState +"<br>"
+	                   + "Lastg State= " + lastgState +"<br>"
+				       +"Departure time = "+ show2()+"<br>"
+				 + "The stops overes between this stations: "+allStopovers.toString()+ "<br>";
 	}
 
 	public int getHour() {

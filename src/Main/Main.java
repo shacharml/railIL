@@ -188,7 +188,7 @@ public class Main {
 
 						if (allTravels.get(i).getAllStopovers().get(j).getName().equals(startingState1)) {
 
-							for (int j2 = j; j2 < args.length; j2++) {
+							for (int j2 = j; j2 < allTravels.get(i).getAllStopovers().size(); j2++) {
 								if (allTravels.get(i).getAllStopovers().get(j2).getName().equals(lastState1)) {
 									System.out.println(allTravels.get(i).toString());
 									counter++;
