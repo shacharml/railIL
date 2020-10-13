@@ -29,7 +29,9 @@ public class main {
 		int hour = Integer.parseInt(args[3]);
 		int minutes = Integer.parseInt(args[4]);
 		
-		File f = new File("/home/shachar/git/railIL/allTravels.txt");
+		
+		//new 
+		File f = new File("/home/anet/git/railIL/allTravels.txt");
 
 		ArrayList<travel> allTravels = scanFromFile(f);
 		
