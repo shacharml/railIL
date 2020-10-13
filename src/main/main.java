@@ -30,7 +30,7 @@ public class main {
 		int minutes = Integer.parseInt(args[4]);
 		
 		
-		//new 
+		
 		File f = new File("/home/anet/git/railIL/allTravels.txt");
 
 		ArrayList<travel> allTravels = scanFromFile(f);
