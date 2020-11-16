@@ -4,14 +4,14 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+// go to: /home/anet/git/railIL/bin and than write java -classpath /home/anet/git/railIL/bin Main.Main
 
 // new 
 public class Main {
 
 	public static void main(String[] args) throws FileNotFoundException {
 
-		File f = new File("allTravels.txt");
+		File f = new File("/home/anet/git/railIL/allTravels.txt");
 
 		ArrayList<travel> allTravels = scanFromFile(f);
 		int choose = 0;

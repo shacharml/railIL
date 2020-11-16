@@ -1,4 +1,4 @@
-6
+7
 Bet Shan
 Modiin
 9
@@ -62,4 +62,11 @@ Modiin
 Tel Aviv
 11
 30
-
+modiin
+bynyamina
+12
+0
+1
+natanya
+13
+0
