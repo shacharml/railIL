@@ -1,4 +1,5 @@
 package Main;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -11,7 +12,7 @@ public class Main {
 
 	public static void main(String[] args) throws FileNotFoundException {
 
-		File f = new File("/home/anet/git/railIL/allTravels.txt");
+		File f = new File("/home/shachar/git/railIL/allTravels.txt");
 
 		ArrayList<travel> allTravels = scanFromFile(f);
 		int choose = 0;
@@ -26,6 +27,7 @@ public class Main {
 			System.out.println(" 1- Enter your travel deatails ");
 			System.out.println(" 2- Sort by departure time ");
 			System.out.println(" 3- search your ride ");
+			System.out.println(" 4- show all rides ");
 			System.out.println(" 9- Exit ");
 
 			choose = s.nextInt();
@@ -89,8 +91,6 @@ public class Main {
 				travel travel = new travel(startingState, lastState, hour, minute, allstStopovers);
 				allTravels.add(travel);
 
-				// System.out.println(allTravels.toString());
-
 				break;
 			}
 			case 2: {
@@ -149,16 +149,16 @@ public class Main {
 				}
 
 				for (int i = 0; i < allTravels.size() && counter <= 3; i++) {
-					if (allTravels.get(i).getStartingState().equals(startingState1)) {
+					if (allTravels.get(i).getStartingState().equalsIgnoreCase(startingState1)) {
 						if (hour <= allTravels.get(i).getHour() && minute <= allTravels.get(i).getMinute()) {
-							if (allTravels.get(i).getLastgState().equals(lastState1)) {
+							if (allTravels.get(i).getLastgState().equalsIgnoreCase(lastState1)) {
 								System.out.println(allTravels.get(i).toString());
 								counter++;
 								continue;
 							}
 
 							for (int k = 0; k < allTravels.get(i).getAllStopovers().size(); k++) {
-								if (allTravels.get(i).getAllStopovers().get(k).getName().equals(lastState1)) {
+								if (allTravels.get(i).getAllStopovers().get(k).getName().equalsIgnoreCase(lastState1)) {
 									if (hour <= allTravels.get(i).getAllStopovers().get(k).getHour()
 											&& minute <= allTravels.get(i).getAllStopovers().get(k).getMinute()) {
 										System.out.println(allTravels.get(i).toString());
@@ -171,10 +171,10 @@ public class Main {
 						}
 					}
 					for (int k = 0; k < allTravels.get(i).getAllStopovers().size(); k++) {
-						if (allTravels.get(i).getAllStopovers().get(k).getName().equals(startingState1)) {
+						if (allTravels.get(i).getAllStopovers().get(k).getName().equalsIgnoreCase(startingState1)) {
 							if (hour <= allTravels.get(i).getAllStopovers().get(k).getHour()
 									&& minute <= allTravels.get(i).getAllStopovers().get(k).getMinute()) {
-								if (allTravels.get(i).getAllStopovers().get(k).getName().equals(lastState1)) {
+								if (allTravels.get(i).getAllStopovers().get(k).getName().equalsIgnoreCase(lastState1)) {
 									System.out.println(allTravels.get(i).toString());
 									counter++;
 									continue;
@@ -186,10 +186,10 @@ public class Main {
 
 					for (int j = 0; j < allTravels.get(i).getAllStopovers().size(); j++) {
 
-						if (allTravels.get(i).getAllStopovers().get(j).getName().equals(startingState1)) {
+						if (allTravels.get(i).getAllStopovers().get(j).getName().equalsIgnoreCase(startingState1)) {
 
 							for (int j2 = j; j2 < allTravels.get(i).getAllStopovers().size(); j2++) {
-								if (allTravels.get(i).getAllStopovers().get(j2).getName().equals(lastState1)) {
+								if (allTravels.get(i).getAllStopovers().get(j2).getName().equalsIgnoreCase(lastState1)) {
 									System.out.println(allTravels.get(i).toString());
 									counter++;
 									continue;
@@ -205,6 +205,11 @@ public class Main {
 
 				break;
 			}
+			case 4 :{
+				//show all rides
+				System.out.println(allTravels.toString());
+				break;
+			}
 			case 9: {
 				saveToFile(f, allTravels);
 				fCountinue = false;
@@ -216,6 +221,7 @@ public class Main {
 
 		s.close();
 	}
+
 
 	public static void saveToFile(File f, ArrayList<travel> allTravels) throws FileNotFoundException {
 		PrintWriter pw = new PrintWriter(f);
@@ -270,17 +276,6 @@ public class Main {
 		return allTravels;
 	}
 
-	public void searchingTravel(ArrayList<travel> allTravels) {
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-	}
+	
 
 }
