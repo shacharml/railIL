@@ -31,7 +31,7 @@ public class main {
 		
 		
 		
-		File f = new File("/home/anet/git/railIL/allTravels.txt");
+		File f = new File("/home/shachar/git/railIL/allTravels.txt");
 
 		ArrayList<travel> allTravels = scanFromFile(f);
 		
