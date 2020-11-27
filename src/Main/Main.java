@@ -149,7 +149,8 @@ public class Main {
 				}
 
 				for (int i = 0; i < allTravels.size() && counter <= 3; i++) {
-					if (allTravels.get(i).getStartingState().equalsIgnoreCase(startingState1)) {
+					//start and last state right
+					if (allTravels.get(i).getStartingState().equalsIgnoreCase(startingState1)) {//if the start sate is mach
 						if (hour <= allTravels.get(i).getHour() && minute <= allTravels.get(i).getMinute()) {
 							if (allTravels.get(i).getLastgState().equalsIgnoreCase(lastState1)) {
 								System.out.println(allTravels.get(i).toString());
@@ -170,11 +171,12 @@ public class Main {
 
 						}
 					}
+					
 					for (int k = 0; k < allTravels.get(i).getAllStopovers().size(); k++) {
 						if (allTravels.get(i).getAllStopovers().get(k).getName().equalsIgnoreCase(startingState1)) {
 							if (hour <= allTravels.get(i).getAllStopovers().get(k).getHour()
 									&& minute <= allTravels.get(i).getAllStopovers().get(k).getMinute()) {
-								if (allTravels.get(i).getAllStopovers().get(k).getName().equalsIgnoreCase(lastState1)) {
+								if (allTravels.get(i).getLastgState().equalsIgnoreCase(lastState1)) {
 									System.out.println(allTravels.get(i).toString());
 									counter++;
 									continue;
@@ -202,6 +204,9 @@ public class Main {
 					}
 
 				}
+				
+				//	System.out.println("dont find the ride you want");
+				
 
 				break;
 			}

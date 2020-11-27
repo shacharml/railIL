@@ -1,4 +1,4 @@
-7
+8
 Bet Shan
 Modiin
 9
@@ -24,6 +24,14 @@ Haifa
 Binyamina
 10
 50
+Binyamina
+Modiin
+10
+12
+1
+Tel Aviv
+11
+0
 Haifa
 Beer Sheva
 10
@@ -49,14 +57,6 @@ Tel Aviv
 Binyamina
 Modiin
 10
-12
-1
-Tel Aviv
-11
-0
-Binyamina
-Modiin
-10
 56
 1
 Tel Aviv
@@ -68,5 +68,13 @@ binyamina
 0
 1
 natanya
+13
+0
+Binyamina
+Ta
+12
+32
+1
+Herzlia
 13
 0
